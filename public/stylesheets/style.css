@@ -1,8 +1,21 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00b7ff;
 }
+
+.menu {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  
+  list-style: none;
+  text-align: center;
+}
+
