@@ -1,6 +1,6 @@
 <h2>Edit this movie!</h2>
 
-<form action="/movies/{{_id}}/edit" method="POST">
+<form action="/movies/{{data._id}}/edit" method="POST">
 
     <label for="title">Title:</label>
     <input type="text" name="title" id="title" value="{{data.title}}">
@@ -19,6 +19,6 @@
             {{/each}}
         </select>
 
-    <button type="submit">Update</button>
+    <button type="submit" class="button">Update</button>
 
 </form>

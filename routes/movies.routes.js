@@ -12,9 +12,20 @@ router.route("/:id/edit")
         data = movie
         Celebrity.find()
         .then((celebrities)=>res.render("movies/edit-movie", {data, celebrities}))
-        
-       })
-    .catch(err=> console.log(`There's an error editing a movie: ${err}`));
+    })
+    .catch(err=> console.log(`There's an error loading a movie: ${err}`));
+})
+.post((req, res)=> {
+    const id = req.params.id;
+    const title = req.body.title;
+    const genre = req.body.genre;
+    const plot = req.body.plot;
+    const cast = req.body.cast;
+    const movie = {title, genre, plot, cast};
+    Movie.findByIdAndUpdate(id, movie, {new: true})
+    .then(res.redirect(`/movies/${id}`)
+    )
+    .catch(err=> console.log(`There's an error updating a movie: ${err}`));
 })
 
 

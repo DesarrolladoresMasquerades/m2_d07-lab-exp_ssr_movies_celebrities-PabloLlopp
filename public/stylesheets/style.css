@@ -1,21 +1,50 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00b7ff;
 }
 
-.menu {
-  background-color: #333;
-  overflow: hidden;
+h2 {
+  margin-top: 20px;
 }
 
-.menu ul {
+.menu  {
   display: flex;
   justify-content: space-around;
-  
   list-style: none;
   text-align: center;
+  background-color: #333;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
+.button {
+  border: none;
+  padding: 20px 50px;
+  margin: 10px;
+  background-color: aquamarine;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: #920239;
+  color: white;
+}
+
+.button:hover {
+  text-decoration: underline;
+  border: 1px solid black;
+}
+
+.genre {
+  color: #920239;
+}
+
+.boxes {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
